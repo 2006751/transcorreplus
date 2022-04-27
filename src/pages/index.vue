@@ -1,6 +1,8 @@
 <template>
-  <section>
-    <h1>Transcorre plus</h1>
+  <section class="screen-index">
+    <div class="theme__screen">
+      <h1>Transcorre plus</h1>
+    </div>
   </section>
 </template>
 

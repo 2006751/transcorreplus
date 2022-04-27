@@ -6,6 +6,10 @@ html {
   @apply px-4 mx-auto;
 }
 
+section[class*='screen-'] {
+  @apply py-12;
+}
+
 @screen md {
   .theme__screen{
     @apply max-w-screen-sm px-0;
@@ -14,6 +18,9 @@ html {
 @screen lg {
   .theme__screen{
     @apply max-w-screen-md;
+  }
+  section[class*='screen-'] {
+    @apply py-16;
   }
 }
 @screen xl {
@@ -24,6 +31,9 @@ html {
 @screen 2xl {
   .theme__screen{
     @apply max-w-screen-xl;
+  }
+  section[class*='screen-'] {
+    @apply py-20;
   }
 }
 
