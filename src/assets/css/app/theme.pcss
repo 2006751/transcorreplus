@@ -1,0 +1,29 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.theme__screen {
+  @apply px-4 mx-auto;
+}
+
+@screen md {
+  .theme__screen{
+    @apply max-w-screen-sm px-0;
+  }
+}
+@screen lg {
+  .theme__screen{
+    @apply max-w-screen-md;
+  }
+}
+@screen xl {
+  .theme__screen{
+    @apply max-w-screen-lg;
+  }
+}
+@screen 2xl {
+  .theme__screen{
+    @apply max-w-screen-xl;
+  }
+}
+

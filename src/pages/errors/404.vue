@@ -1,12 +1,10 @@
 <template>
-  <section>
-    <h1>Transcorre plus</h1>
-  </section>
+
 </template>
 
 <script>
 export default {
-  name: "index"
+  name: "404"
 }
 </script>
 

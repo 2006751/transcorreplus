@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <v-main>
-      <h1>Olá</h1>
+      <router-view/>
     </v-main>
   </v-app>
 </template>
@@ -12,6 +12,6 @@ export default {
 }
 </script>
 
-<style scoped>
-
+<style lang="pcss">
+@import "../assets/css/app.pcss";
 </style>
