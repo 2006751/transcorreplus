@@ -73,7 +73,7 @@ export default {
 .wrapper {
 
   >>> .v-card {
-    @apply absolute px-4 w-full;
+    @apply absolute px-4 py-8 w-full;
     @apply max-w-lg !important;
     top: 50%;
     left: 50%;
