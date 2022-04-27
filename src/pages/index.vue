@@ -79,8 +79,16 @@ export default {
     left: 50%;
     transform: translate(-50%, -50%);
 
+    .v-card__title, .v-card__text {
+      @apply text-secondary font-extrabold;
+    }
+
     .v-card__title {
-      @apply text-secondary text-3xl font-extrabold justify-center;
+      @apply text-3xl justify-center;
+    }
+
+    .v-card__text {
+      @apply text-lg pb-0 pt-8;
     }
 
     .v-card__content {
