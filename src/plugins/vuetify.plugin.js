@@ -103,16 +103,11 @@ export default new Vuetify({
         dark: false,
         themes: {
             light: {
-                primary: '#FF00A2',
-                secondary: '#CB0E86',
-                "tertiary-light": '#A745B9',
-                "tertiary-dark": '#50015F',
+                primary: '#1c5ca2',
+                secondary: '#183f6a',
                 accent: '#f2f2f2',
                 white: '#FFFFFF',
                 'black': '#484848',
-                "gray-dark": '#313131',
-                "gray-light": '#F9F7FC',
-                "gray-medium": '#707070',
                 info: colors.teal.lighten1,
                 warning: colors.amber.base,
                 error: colors.deepOrange.accent4,

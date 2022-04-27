@@ -2,6 +2,7 @@ import Vue from 'vue';
 import App from './layouts/default.vue'
 import Vuetify from './plugins/vuetify.plugin';
 import routes from './routes';
+import './plugins/validation/vee-validate.js';
 
 //---------------------------------------------------------------------------------------------------------------------/
 // Vue Router

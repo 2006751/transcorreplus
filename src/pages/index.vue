@@ -1,17 +1,91 @@
 <template>
   <section class="screen-index">
     <div class="theme__screen">
-      <h1>Transcorre plus</h1>
+      <div class="wrapper">
+        <v-card
+            elevation="4"
+        >
+          <v-card-title>Transcorre plus</v-card-title>
+          <v-card-text>Acessar conta</v-card-text>
+          <div class="v-card__content">
+            <validation-observer ref="observer" v-slot="{handleSubmit}">
+              <form @submit.prevent="handleSubmit(submit)">
+                <validation-provider
+                    name="e-mail"
+                    vid="email"
+                    rules="required|email"
+                    v-slot="{ errors }"
+                    tag="div">
+                  <v-text-field
+                      label="Digite seu e-mail"
+                      v-model="login.username"
+                      outlined
+                      :error-messages="errors[0]"
+                  ></v-text-field>
+                </validation-provider>
+                <validation-provider
+                    name="senha"
+                    vid="senha"
+                    rules="required|min:8"
+                    v-slot="{ errors }"
+                    tag="div">
+                  <v-text-field
+                      type="password"
+                      label="Digite a senha"
+                      v-model="login.password"
+                      outlined
+                      :error-messages="errors[0]"
+                  ></v-text-field>
+                </validation-provider>
+                <div class="flex justify-center mt-4">
+                  <v-btn large color="primary" type="submit">
+                    <span class="mx-8">Acessar</span>
+                  </v-btn>
+                </div>
+              </form>
+            </validation-observer>
+          </div>
+        </v-card>
+      </div>
     </div>
   </section>
 </template>
 
 <script>
 export default {
-  name: "index"
+  name: "index",
+  data: () => ({
+    login: {}
+  }),
+  methods: {
+    submit() {
+
+    }
+  }
 }
 </script>
 
-<style scoped>
+<style lang="pcss" scoped>
+.screen-index {
+  @apply h-screen;
+}
 
+.wrapper {
+
+  >>> .v-card {
+    @apply absolute px-4 w-full;
+    @apply max-w-lg !important;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    .v-card__title {
+      @apply text-secondary text-3xl font-extrabold justify-center;
+    }
+
+    .v-card__content {
+      @apply p-4;
+    }
+  }
+}
 </style>
