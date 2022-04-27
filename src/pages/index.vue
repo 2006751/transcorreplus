@@ -68,6 +68,7 @@ export default {
 <style lang="pcss" scoped>
 .screen-index {
   @apply h-screen;
+  background-color: rgb(234 236 229 / 20%);
 }
 
 .wrapper {
