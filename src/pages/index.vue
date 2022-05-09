@@ -59,7 +59,13 @@ export default {
   }),
   methods: {
     submit() {
-
+      this.$axios.post('https://transcorre-plus-default-rtdb.firebaseio.com/', this.login)
+          .then(response => {
+            console.log(response);
+          })
+          .catch(err => {
+            console.log(err);
+          })
     }
   }
 }

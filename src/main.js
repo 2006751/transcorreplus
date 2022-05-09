@@ -8,6 +8,7 @@ import './plugins/validation/vee-validate.js';
 // Vue Router
 //---------------------------------------------------------------------------------------------------------------------/
 import VueRouter from 'vue-router';
+
 Vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -17,6 +18,14 @@ const router = new VueRouter({
         return {x: 0, y: 0}
     }
 });
+
+//-----------------------------------------------------------------------------/
+// AXIOS
+//-----------------------------------------------------------------------------/
+
+import axios from 'axios';
+
+Vue.prototype.$axios = axios;
 
 new Vue({
     router,
