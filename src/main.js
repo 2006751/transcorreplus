@@ -26,28 +26,25 @@ import {initializeApp} from "firebase/app";
 import {getDatabase, ref, set} from "firebase/database";
 
 const config = {
-    apiKey: "AIzaSyCPRqO1-BtPZFxCKbogJ40-WVT4fA4kYFk",
-    authDomain: "transcorre-plus.firebaseapp.com",
-    databaseURL: "https://transcorre-plus-default-rtdb.firebaseio.com",
-    projectId: "transcorre-plus",
-    storageBucket: "transcorre-plus.appspot.com",
-    messagingSenderId: "344831762723",
-    appId: "1:344831762723:web:f8a92231f1c8c361d9ac96"
+    apiKey: "AIzaSyCnFwlBXu5WTvFPFjWGyK_oahDBXFUYRW4",
+    authDomain: "transcorreplus-a7ded.firebaseapp.com",
+    databaseURL: "https://transcorreplus-a7ded-default-rtdb.firebaseio.com/",
+    projectId: "transcorreplus-a7ded",
+    storageBucket: "transcorreplus-a7ded.appspot.com",
+    messagingSenderId: "869956711585",
+    appId: "1:869956711585:web:ebed29126e305e8c852ce0"
 };
 
 const app = initializeApp(config);
 const db = ref(getDatabase(app), 'auth');
 
-class serviceDB {
+class firebase {
     getAll() {
         return db;
     }
 
-    static create(value) {
-        return set(ref(getDatabase(app), 'users'), {
-            username: 'aslan',
-            email: 'aslan-k@',
-        });
+    static create(value, name) {
+        return set(ref(getDatabase(app), name), value);
     }
 
     update(key, value) {
@@ -63,7 +60,7 @@ class serviceDB {
     }
 }
 
-Vue.prototype.$firebase = serviceDB
+Vue.prototype.$firebase = firebase
 
 
 new Vue({
