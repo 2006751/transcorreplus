@@ -4,6 +4,13 @@ import Vuetify from './plugins/vuetify.plugin';
 import routes from './routes';
 import './plugins/validation/vee-validate.js';
 
+
+import VueSweetalert2 from 'vue-sweetalert2';
+import 'sweetalert2/dist/sweetalert2.min.css';
+
+
+Vue.use(VueSweetalert2);
+
 //---------------------------------------------------------------------------------------------------------------------/
 // Vue Router
 //---------------------------------------------------------------------------------------------------------------------/
@@ -23,7 +30,7 @@ const router = new VueRouter({
 // FIREBASE
 //-----------------------------------------------------------------------------/
 import {initializeApp} from "firebase/app";
-import {getDatabase, ref, set} from "firebase/database";
+import {getDatabase, ref, set, onValue} from "firebase/database";
 
 const config = {
     apiKey: "AIzaSyCnFwlBXu5WTvFPFjWGyK_oahDBXFUYRW4",
@@ -36,11 +43,10 @@ const config = {
 };
 
 const app = initializeApp(config);
-const db = ref(getDatabase(app), 'auth');
 
 class firebase {
-    getAll() {
-        return db;
+    static get(path) {
+        return onValue(ref(db, path), (response) => response);
     }
 
     static create(value, name) {
@@ -48,15 +54,15 @@ class firebase {
     }
 
     update(key, value) {
-        return db.child(key).update(value);
+        // return db.child(key).update(value);
     }
 
     delete(key) {
-        return db.child(key).remove();
+        // return db.child(key).remove();
     }
 
     deleteAll() {
-        return db.remove();
+        // return db.remove();
     }
 }
 

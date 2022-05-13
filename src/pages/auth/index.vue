@@ -45,6 +45,10 @@
               </form>
             </validation-observer>
           </div>
+          <div class="flex flex-col items-center justify-center">
+            <router-link to="esquici-senha">Esqueci minha senha</router-link>
+            <router-link to="/registrar">Cadastre-se</router-link>
+          </div>
         </v-card>
       </div>
     </div>
@@ -59,7 +63,7 @@ export default {
   }),
   methods: {
     submit() {
-      this.$firebase.create(this.login)
+      this.$firebase.create(this.login, 'auth')
           .then(response => {
             console.log(response);
           })
