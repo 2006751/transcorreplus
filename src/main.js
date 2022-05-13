@@ -30,7 +30,7 @@ const router = new VueRouter({
 // FIREBASE
 //-----------------------------------------------------------------------------/
 import {initializeApp} from "firebase/app";
-import {getDatabase, ref, set, onValue} from "firebase/database";
+import {getDatabase, ref, set, onValue, push} from "firebase/database";
 
 const config = {
     apiKey: "AIzaSyCnFwlBXu5WTvFPFjWGyK_oahDBXFUYRW4",
@@ -45,12 +45,12 @@ const config = {
 const app = initializeApp(config);
 
 class firebase {
-    static get(path) {
-        return onValue(ref(db, path), (response) => response);
+    static get(value, path) {
+        return onValue(ref(getDatabase(app), path), (response) => response);
     }
 
-    static create(value, name) {
-        return set(ref(getDatabase(app), name), value);
+    static post(value, name) {
+        return push(ref(getDatabase(app), name), value);
     }
 
     update(key, value) {

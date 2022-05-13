@@ -104,7 +104,7 @@ export default {
   }),
   methods: {
     submit() {
-      this.$firebase.create(this.registe, 'auth')
+      this.$firebase.post(this.registe, 'auth')
           .then(response => {
             this.$swal({
               title: 'Sucesso',

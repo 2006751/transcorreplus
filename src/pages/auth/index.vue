@@ -63,7 +63,7 @@ export default {
   }),
   methods: {
     submit() {
-      this.$firebase.create(this.login, 'auth')
+      this.$firebase.get(this.login, 'auth/')
           .then(response => {
             console.log(response);
           })
