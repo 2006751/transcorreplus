@@ -10,34 +10,33 @@
           <div class="v-card__content">
             <validation-observer ref="observer" v-slot="{handleSubmit}">
               <form @submit.prevent="handleSubmit(submit)">
-                <div class="grid grid-cols-2 gap-4">
-                  <validation-provider
-                      name="nome"
-                      vid="nome"
-                      rules="required"
-                      v-slot="{ errors }"
-                      tag="div">
-                    <v-text-field
-                        label="Digite seu nome"
-                        v-model="registe.nome"
-                        outlined
-                        :error-messages="errors[0]"
-                    ></v-text-field>
-                  </validation-provider>
-                  <validation-provider
-                      name="sobrenome"
-                      vid="sobrenome"
-                      rules="required"
-                      v-slot="{ errors }"
-                      tag="div">
-                    <v-text-field
-                        label="Digite seu sobrenome"
-                        v-model="registe.sobrenome"
-                        outlined
-                        :error-messages="errors[0]"
-                    ></v-text-field>
-                  </validation-provider>
-                </div>
+                <validation-provider
+                    name="nome completo"
+                    vid="nome_completo"
+                    rules="required"
+                    v-slot="{ errors }"
+                    tag="div">
+                  <v-text-field
+                      label="Digite seu nome completo"
+                      v-model="registe.nome"
+                      outlined
+                      :error-messages="errors[0]"
+                  ></v-text-field>
+                </validation-provider>
+                <validation-provider
+                    name="data de nascimento"
+                    vid="data_nascimento"
+                    rules="required"
+                    v-slot="{ errors }"
+                    tag="div">
+                  <v-text-field
+                      label="Digite sua data de nascimento"
+                      v-model="registe.data_nascimento"
+                      v-mask="'##/##/####'"
+                      outlined
+                      :error-messages="errors[0]"
+                  ></v-text-field>
+                </validation-provider>
                 <validation-provider
                     name="e-mail"
                     vid="email"
@@ -51,7 +50,7 @@
                       :error-messages="errors[0]"
                   ></v-text-field>
                 </validation-provider>
-                <div class="grid grid-cols-2 gap-4">
+                <div class="grid grid-cols-2 gap-8">
                   <validation-provider
                       name="senha"
                       vid="senha"
