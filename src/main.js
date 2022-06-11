@@ -76,7 +76,6 @@ class firebase {
 
 Vue.prototype.$firebase = firebase
 
-
 new Vue({
     router,
     vuetify: Vuetify,
