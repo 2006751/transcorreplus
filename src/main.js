@@ -41,13 +41,13 @@ import {initializeApp} from "firebase/app";
 import {getDatabase, ref, set, onValue, push} from "firebase/database";
 
 const config = {
-    apiKey: "AIzaSyCnFwlBXu5WTvFPFjWGyK_oahDBXFUYRW4",
-    authDomain: "transcorreplus-a7ded.firebaseapp.com",
-    databaseURL: "https://transcorreplus-a7ded-default-rtdb.firebaseio.com/",
-    projectId: "transcorreplus-a7ded",
-    storageBucket: "transcorreplus-a7ded.appspot.com",
-    messagingSenderId: "869956711585",
-    appId: "1:869956711585:web:ebed29126e305e8c852ce0"
+    apiKey: "AIzaSyC7JGO-OUgTpLT-dwEq-YOLwLrNbP72BLg",
+    authDomain: "transcorreplus-aefa0.firebaseapp.com",
+    databaseURL: "https://transcorreplus-aefa0-default-rtdb.firebaseio.com/",
+    projectId: "transcorreplus-aefa0",
+    storageBucket: "transcorreplus-aefa0.appspot.com",
+    messagingSenderId: "74402290105",
+    appId: "1:74402290105:web:dfcbdbac92195aeb25fe68"
 };
 
 const app = initializeApp(config);
