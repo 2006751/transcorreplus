@@ -82,7 +82,7 @@
                 </div>
                 <div class="flex justify-center mt-4">
                   <v-btn large color="primary" type="submit">
-                    <span class="mx-8">Acessar</span>
+                    <span class="mx-8">Cadastrar</span>
                   </v-btn>
                 </div>
               </form>
@@ -95,6 +95,8 @@
 </template>
 
 <script>
+import AES from 'crypto-js/aes';
+
 export default {
   name: "registrar",
   data: () => ({
@@ -103,6 +105,7 @@ export default {
   }),
   methods: {
     submit() {
+      this.registe.senha = AES.encrypt('key', this.registe.senha).toString()
       this.$firebase.post(this.registe, 'auth')
           .then(response => {
             this.$swal({

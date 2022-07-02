@@ -63,13 +63,15 @@ export default {
   }),
   methods: {
     submit() {
-      this.$firebase.get(this.login, 'auth/')
-          .then(response => {
-            console.log(response);
-          })
-          .catch(err => {
-            console.log(err);
-          })
+      this.$router.push('/map')
+      // this.$firebase.get()
+      //     .then(response => {
+      //       console.log(response);
+      //       // this.registe.senha = crypto.createHash(this.registe.senha)
+      //     })
+      //     .catch(err => {
+      //       console.log(err);
+      //     })
     }
   }
 }
