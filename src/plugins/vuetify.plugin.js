@@ -34,6 +34,7 @@ import Vuetify, {
     VSpacer,
     VList,
     VListItem,
+    VListItemGroup,
     VListItemIcon,
     VListItemContent,
     VListItemTitle,
@@ -42,7 +43,9 @@ import Vuetify, {
     VFooter,
     VBreadcrumbs,
     VRadioGroup,
-    VRadio
+    VRadio,
+    VDialog,
+    VSwitch
 } from 'vuetify/lib';
 
 Vue.use(Vuetify, {
@@ -78,6 +81,7 @@ Vue.use(Vuetify, {
         VSpacer,
         VList,
         VListItem,
+        VListItemGroup,
         VListItemIcon,
         VListItemContent,
         VListItemTitle,
@@ -87,15 +91,17 @@ Vue.use(Vuetify, {
         VBreadcrumbs,
         VRadioGroup,
         VRadio,
+        VDialog,
+        VSwitch
     },
 });
 
 export default new Vuetify({
-  icons: {
-    iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
-  },
+    icons: {
+        iconfont: 'mdiSvg', // 'mdi' || 'mdiSvg' || 'md' || 'fa' || 'fa4' || 'faSvg'
+    },
     lang: {
-        locales: { pt },
+        locales: {pt},
         current: 'pt',
     },
     defaultAssets: false,
@@ -103,8 +109,8 @@ export default new Vuetify({
         dark: false,
         themes: {
             light: {
-                primary: '#1c5ca2',
-                secondary: '#183f6a',
+                primary: '#455c7c',
+                secondary: '#2e3f57',
                 accent: '#f2f2f2',
                 white: '#FFFFFF',
                 'black': '#484848',

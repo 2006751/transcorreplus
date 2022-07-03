@@ -1,7 +1,7 @@
-import index from './pages/auth/index.vue';
+import authIndex from './pages/auth/index.vue';
 import registrar from './pages/auth/registrar.vue';
 import not from './pages/errors/404.vue';
-import map from './pages/map.vue';
+import index from './pages/index.vue';
 
 export default [
     {
@@ -15,10 +15,6 @@ export default [
     {
         path: '/esquici-senha',
         component: registrar
-    },
-    {
-        path: '/map',
-        component: map
     },
     {
         path: '*',
