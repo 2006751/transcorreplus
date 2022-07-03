@@ -63,7 +63,7 @@
                     Questionário da Saúde
                   </v-list-item-title>
                 </v-list-item>
-                <v-list-item link>
+                <v-list-item link @click="dialog.informacao = !dialog.informacao">
                   <v-list-item-icon>
                     <v-icon>mdi-information-outline</v-icon>
                   </v-list-item-icon>
@@ -340,6 +340,44 @@
         </v-stepper-items>
       </v-stepper>
 
+    </v-dialog>
+    <v-dialog
+        v-model="dialog.informacao"
+    >
+      <v-card>
+        <v-card-title>Visão Geral</v-card-title>
+        <v-card-text>
+          <p>Doença bacteriana transmitida pela urina de animais infectados.</p>
+          <p>
+            Infecção humana resultante da exposição direta ou indireta à urina de animais
+            infectados, por meio do contato com água, solo ou alimentos contaminados.</p>
+          <p>
+            Febre alta, dor de cabeça, sangramento, dor muscular, calafrios, olhos vermelhos e
+            vômitos
+            são alguns sintomas.
+          </p>
+          <p>
+            Sem tratamento, a leptospirose pode causar danos renais e hepáticos e até mesmo a morte.
+            Os antibióticos combatem a infecção.
+          </p>
+        </v-card-text>
+        <v-card-title>Sintomas</v-card-title>
+        <v-card-title>Requer um diagnóstico médico</v-card-title>
+        <v-card-text>
+          <p>Febre alta, dor de cabeça, sangramento, dor muscular, calafrios, olhos vermelhos e
+            vômitos são alguns sintomas.</p>
+        </v-card-text>
+        <v-card-title>As pessoas podem ter:</v-card-title>
+        <v-card-text>
+          <p>
+            Dores locais: nas articulações ou nos músculos
+            No aparelho gastrointestinal: diarreia, náusea ou vômito
+            No corpo: calafrios, fadiga ou febre alta
+            Também é comum: dor de cabeça, dor de garganta, irritação na pele, olhos avermelhados ou
+            tosse
+          </p>
+        </v-card-text>
+      </v-card>
     </v-dialog>
   </div>
 </template>
